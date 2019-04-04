@@ -7,4 +7,5 @@ HEIGHT = 900
 while True:
     original_screen = modules.capture(x=X, y=Y, width=WIDTH, height=HEIGHT)
     processed_screen = modules.process(original_screen)
-    modules.show(processed_screen)
+    if not modules.show(processed_screen):
+        break
