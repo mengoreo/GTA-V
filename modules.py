@@ -13,7 +13,8 @@ def show(image):
     cv2.show('Window', image)
     if cv2.waitKey(25) & 0xFF == ord('q'):
         cv2.destoryAllWindows()
-        break
+        return False
+    return True
 
 
 def process(image):
